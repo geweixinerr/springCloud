@@ -1,0 +1,7 @@
+{"properties": [
+  {
+    "name": "logging.level.com.zj.port.plugin",
+    "type": "java.lang.String",
+    "description": "log"
+  }
+]}

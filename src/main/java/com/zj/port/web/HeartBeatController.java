@@ -1,27 +1,21 @@
 package com.zj.port.web;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.zj.port.commons.log.MicroLogger;
+@Controller
+public class HeartbeatController {
 
-/**
- * 系统首页入口,心跳检测页
- * 
- * @author gewx
- **/
-@RestController
-public class HeartBeatController {
-
-	private final MicroLogger logger = new MicroLogger(HeartBeatController.class);
-
-	@GetMapping("/")
+	/**
+	 * 心跳检测
+	 * 
+	 * @author gewx
+	 * @return 心跳视图
+	 **/
+	@GetMapping
 	public ModelAndView index() {
-		final String methodName = "index";
-		logger.enter(methodName, "服务首页调用");
 		ModelAndView view = new ModelAndView("/index");
-		logger.exit(methodName, "服务首页调用");
 		return view;
 	}
 }
