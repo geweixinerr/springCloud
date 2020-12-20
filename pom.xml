@@ -135,6 +135,8 @@
 					</execution>
 				</executions>
 				<configuration>
+					<username>zj-server/registry.portzj.com</username>
+					<password>password</password>
 					<repository>registry.portzj.com</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
