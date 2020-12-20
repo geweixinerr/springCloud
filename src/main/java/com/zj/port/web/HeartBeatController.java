@@ -12,9 +12,9 @@ import com.zj.port.commons.log.MicroLogger;
  * @author gewx
  **/
 @RestController
-public class IndexController {
+public class HeartBeatController {
 
-	private final MicroLogger logger = new MicroLogger(IndexController.class);
+	private final MicroLogger logger = new MicroLogger(HeartBeatController.class);
 
 	@GetMapping("/")
 	public ModelAndView index() {
