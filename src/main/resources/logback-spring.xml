@@ -12,9 +12,9 @@
 
 	<!-- 按照每天生成日志文件 -->
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log_Home}/micro.log</file> 
+	    <file>/opt/logs/springcloud.log</file> 
 		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>${log_Home}/micro.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>/opt/logs/springcloud.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<!-- kb/mb/gb -->
 			<maxFileSize>128MB</maxFileSize>
 			<!-- 日志文件保留天数 -->
@@ -37,9 +37,9 @@
 	
     <!-- logstash -->
     <appender name="LOGSTASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log_Home}/micro.json</file>
+        <file>/opt/logs/springcloud.json</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log_Home}/micro.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>/opt/logs/springcloud.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
